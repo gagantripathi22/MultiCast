@@ -15,9 +15,16 @@ Normally, macOS only lets you output audio to one device at a time unless you ma
 MultiCast interfaces directly with the macOS **Hardware Abstraction Layer (HAL)** via `CoreAudio`. 
 When you select multiple output devices, it programmatically creates an Aggregate Device with the `kAudioAggregateDeviceIsStackedKey` property enabled. This tells macOS to treat the device as a "Multi-Output" device (mirroring audio to all sub-devices) rather than aggregating their channels. It then sets this virtual device as your system's default output.
 
-## 🚀 Installation & Build
+## 🚀 Installation
 
-If you are cloning this repository, you can build the native `.app` bundle instantly using the provided shell script:
+### The Easy Way (Recommended)
+1. Download the latest `MultiCast.dmg` file from the root of this repository.
+2. Double-click the downloaded `.dmg` file to open it.
+3. Drag the **MultiCast** app icon into the **Applications** folder shortcut.
+4. Open your Applications folder and double-click MultiCast to run it!
+
+### Building from Source
+If you prefer to compile it yourself, you can build the native `.app` bundle instantly using the provided shell script:
 
 1. Clone the repository:
    ```bash
